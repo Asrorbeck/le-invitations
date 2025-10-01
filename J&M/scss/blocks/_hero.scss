@@ -1,0 +1,15 @@
+.hero {
+  background-image: url("../../img/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 110vh;
+  padding-top: 115px;
+  &__title {
+    font-size: 64px;
+    text-align: center;
+    font-family: "Viaoda Libre";
+    font-weight: 400;
+    color: #fff;
+  }
+}

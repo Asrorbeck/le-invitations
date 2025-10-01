@@ -1,0 +1,118 @@
+.invit {
+  position: relative;
+  width: 100%;
+  min-height: 1100px;
+  &__extra-div {
+    position: absolute;
+    inset: 0;
+    background-image: url("../../img/invit-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: calc(0% - 145px);
+    width: 100%;
+  }
+  &__body {
+    font-family: "medium";
+    font-size: 20px;
+    text-align: center;
+    color: #aaa76d;
+    font-weight: 300;
+    width: 100%;
+  }
+  &__container {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    &::after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      width: 130px;
+      height: 150px;
+      top: calc(0% + 85px);
+      left: calc(0% - 60px);
+      background-image: url("../../img/invit-top.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      width: 77px;
+      height: 150px;
+      bottom: calc(50% - 165px);
+      right: calc(0% - 18px);
+      background-image: url("../../img/invit-bottom.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+  &__date {
+    font-size: 36px;
+    font-family: "semibold";
+    font-weight: 500;
+    color: #aaa76d;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+  &__dec {
+    font-family: "mrs-saint";
+    font-size: 70px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  &__header {
+    font-size: 40px;
+    font-family: monotype;
+    font-weight: 400;
+    color: #aaa76d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    max-width: 360px;
+    text-align: center;
+    width: 100%;
+  }
+  &__time {
+    font-size: 32px;
+    font-family: "medium";
+    font-weight: 400;
+    color: #aaa76d;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-size: 36px;
+    font-family: "semibold";
+    font-weight: 500;
+    color: #aaa76d;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    max-width: 315px;
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  &__img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.ring {
+  &__img {
+    width: 100%;
+  }
+}

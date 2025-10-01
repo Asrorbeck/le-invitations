@@ -1,0 +1,711 @@
+/* viaoda-libre-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Viaoda Libre";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/viaoda-libre-v20-latin-regular.woff2") format("woff2"),
+    url("../fonts/viaoda-libre-v20-latin-regular.ttf") format("truetype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "monotype";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Monotype-Corsiva-Regular.ttf") format("truetype");
+}
+/* cormorant-garamond-500 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/cormorant-garamond-v21-cyrillic_latin-500.woff2")
+      format("woff2"),
+    url("../fonts/cormorant-garamond-v21-cyrillic_latin-500.ttf")
+      format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* cormorant-garamond-600 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "semibold";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/cormorant-garamond-v21-cyrillic_latin-600.woff2")
+      format("woff2"),
+    url("../fonts/cormorant-garamond-v21-cyrillic_latin-600.ttf")
+      format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "mrs-saint";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/MrsSaintDelafield-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* cormorant-infant-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Cormorant Infant";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/cormorant-infant-v22-latin-500.woff2") format("woff2"),
+    url("../fonts/cormorant-infant-v22-latin-500.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+body,
+section,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+html {
+  background-color: #fafafa;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #aaa76d;
+  border-radius: 50%;
+  bottom: calc(0% + 50px);
+  right: calc(0% + 20px);
+}
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateY(-50%);
+  top: calc(50% + 200px);
+  transform: rotate(0deg);
+  cursor: pointer;
+  margin-top: 70px;
+}
+
+.arrow span {
+  display: block;
+  width: 5vw;
+  height: 5vw;
+  border-bottom: 5px solid #aaa76d;
+  border-right: 5px solid #aaa76d;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 80% auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #888;
+  font-family: "medium";
+  font-size: 20px;
+  width: 50%;
+  text-align: center;
+}
+
+.modal-button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: none;
+  background-color: #aaa76d;
+  color: #fff;
+  font-family: "medium";
+  font-size: 18px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1140px;
+}
+
+.hero {
+  background-image: url("../img/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 110vh;
+  padding-top: 115px;
+}
+.hero__title {
+  font-size: 64px;
+  text-align: center;
+  font-family: "Viaoda Libre";
+  font-weight: 400;
+  color: #fff;
+}
+
+.invit {
+  position: relative;
+  width: 100%;
+  min-height: 1100px;
+}
+.invit__extra-div {
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/invit-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  top: calc(0% - 145px);
+  width: 100%;
+}
+.invit__body {
+  font-family: "medium";
+  font-size: 20px;
+  text-align: center;
+  color: #aaa76d;
+  font-weight: 300;
+  width: 100%;
+}
+.invit__container {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.invit__container::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 130px;
+  height: 150px;
+  top: calc(0% + 85px);
+  left: calc(0% - 60px);
+  background-image: url("../img/invit-top.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.invit__container::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 77px;
+  height: 150px;
+  bottom: calc(50% - 165px);
+  right: calc(0% - 18px);
+  background-image: url("../img/invit-bottom.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.invit__date {
+  font-size: 36px;
+  font-family: "semibold";
+  font-weight: 500;
+  color: #aaa76d;
+  text-align: center;
+  margin-bottom: 3px;
+}
+.invit__dec {
+  font-family: "mrs-saint";
+  font-size: 70px;
+  margin-top: 20px;
+  line-height: 40px;
+}
+.invit__header {
+  font-size: 40px;
+  font-family: monotype;
+  font-weight: 400;
+  color: #aaa76d;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+  max-width: 360px;
+  text-align: center;
+  width: 100%;
+}
+.invit__time {
+  font-size: 32px;
+  font-family: "medium";
+  font-weight: 400;
+  color: #aaa76d;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.invit__title {
+  font-size: 36px;
+  font-family: "semibold";
+  font-weight: 500;
+  color: #aaa76d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.invit__img {
+  max-width: 315px;
+  width: 100%;
+  margin-top: 70px;
+}
+.invit__img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring__img {
+  width: 100%;
+}
+
+.calendar__img {
+  width: 100%;
+}
+
+.program {
+  background-color: #aaa76d;
+  position: relative;
+  padding-bottom: 200px;
+  margin-bottom: 100px;
+}
+.program::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 300px;
+  background-image: url("../img/location-bottom.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+}
+.program__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.program__cafe {
+  font-size: 24px;
+  font-family: "semibold";
+  text-align: center;
+  color: #aaa76d;
+  padding: 10px 80px;
+  background-color: #fff;
+  border-radius: 40px;
+}
+.program__img {
+  max-width: 380px;
+  width: 100%;
+  position: absolute;
+  top: calc(0% - 80px);
+}
+.program__img-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.program__subtitle {
+  font-size: 20px;
+  font-family: "medium";
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.program__map {
+  margin-bottom: 24px;
+}
+.program__title {
+  padding-top: 310px;
+  font-size: 40px;
+  font-family: "semibold";
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.program__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotel {
+  margin-bottom: 40px;
+  color: #54585f;
+}
+.hotel__btn {
+  padding: 7px 40px;
+  background-color: #aaa76d;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-family: moniqa;
+}
+.hotel__btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hotel__header {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: Belissimo;
+  margin-bottom: 20px;
+  line-height: 40px;
+  text-align: center;
+}
+.hotel__img {
+  max-width: 126px;
+  width: 100%;
+  margin-right: 20px;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.hotel__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hotel__item-address {
+  font-family: "semibold";
+  font-weight: 300;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #aaa76d;
+}
+.hotel__item-name {
+  font-family: "semibold";
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #aaa76d;
+}
+.hotel__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.hotel__subheader {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "moniqa";
+  font-weight: 300;
+}
+.hotel__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hotel__title {
+  font-family: "semibold";
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: #aaa76d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  position: relative;
+}
+.form::after {
+  content: "";
+  position: absolute;
+  top: calc(0% + 10px);
+  right: 0;
+  width: 80px;
+  height: 140px;
+  background-image: url("../img/form.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.form__btn {
+  padding: 10px 100px;
+  background-color: #aaa76d;
+  border-radius: 40px;
+  font-family: "semibold";
+  margin-top: 4px;
+  font-size: 24px;
+  color: #fff;
+}
+.form__btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form__container {
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa76d;
+  position: relative;
+  z-index: 1;
+}
+.form__control {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.form__title {
+  font-family: "semibold";
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.form__input {
+  padding: 8px 16px;
+  border: 1px solid #aaa76d;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  font-family: "medium";
+  color: #aaa76d;
+}
+.form__input::-moz-placeholder {
+  color: #aaa76d;
+  font-family: "medium";
+  font-size: 16px;
+}
+.form__input::placeholder {
+  color: #aaa76d;
+  font-family: "medium";
+  font-size: 16px;
+}
+.form__input-name {
+  margin-bottom: 5px;
+  font-family: "semibold";
+  font-size: 20px;
+}
+.form__subtitle {
+  font-family: "medium";
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.tg {
+  background-color: #aaa76d;
+  border-radius: 6px 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.tg::after {
+  content: "";
+  position: absolute;
+  bottom: calc(0% - 60px);
+  right: 0;
+  width: 80px;
+  height: 140px;
+  background-image: url("../img/tg-bottom.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.tg::before {
+  content: "";
+  position: absolute;
+  top: calc(0% - 45px);
+  left: 0;
+  width: 80px;
+  height: 140px;
+  background-image: url("../img/tg-top.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.tg__link {
+  text-align: center;
+  padding: 10px 72px;
+  background-color: #fff;
+  border-radius: 40px;
+  font-size: 24px;
+  font-family: "semibold";
+  color: #aaa76d;
+}
+.tg__subtitle {
+  font-size: 20px;
+  font-family: "medium";
+  text-align: center;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.tg__title {
+  font-size: 40px;
+  font-family: "semibold";
+  text-align: center;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.tg__link-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer {
+  position: absolute;
+  width: 100%;
+  min-height: 200px;
+}
+.timer__extra-div {
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/timer-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  top: calc(0% + 10px);
+  width: 100%;
+}
+.timer__body {
+  font-size: 20px;
+  font-family: "medium";
+  color: #7c7b7b;
+}
+.timer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timer__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timer__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 300px;
+  width: 100%;
+}
+.timer__time {
+  font-family: "Cormorant Infant";
+  font-size: 36px;
+  color: #aaa76d;
+}
+.timer__title {
+  font-family: "semibold";
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #aaa76d;
+  margin-bottom: 20px;
+}
+
+.footer {
+  background-image: url("../img/footer.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 110px;
+  padding-top: 240px;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 8px;
+}
+.footer__main-link {
+  color: #fff;
+  font-family: "medium";
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.footer__subtitle {
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+  font-family: monotype;
+  font-weight: 400;
+  margin-bottom: 100px;
+} /*# sourceMappingURL=main.css.map */

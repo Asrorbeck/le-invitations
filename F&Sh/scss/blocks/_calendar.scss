@@ -1,0 +1,117 @@
+.calendar {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__date {
+    font-family: calypso;
+    font-size: 98px;
+    font-weight: bold;
+    background: linear-gradient(to right, #cf9f5c, #f9b818);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  &__header,
+  &__year {
+    font-family: Vibes;
+    font-size: 80px;
+    font-weight: 400;
+    background: linear-gradient(to right, #cf9f5c, #f9b818);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+  }
+
+  &__year {
+    font-family: calypso;
+  }
+
+  &__dec {
+    font-family: Vibes;
+    margin-right: 5px;
+  }
+  &__img {
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  &__line {
+    width: 2px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: none;
+    outline: none;
+    background-color: #ba9845;
+    border: none;
+  }
+  &__time {
+    font-family: calypso;
+    font-size: 24px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #cf9f5c, #f9b818);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  &__time-wrapper {
+    display: flex;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  &__wrapper {
+    position: relative;
+    &::after {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      width: 63px;
+      height: 59px;
+      background-image: url("../../img/angle.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      bottom: 0;
+      right: calc(0% - 15px);
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .calendar {
+    &__header,
+    &__year {
+      font-size: 32px;
+    }
+
+    &__line {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    &__date {
+      font-size: 48px;
+    }
+
+    &__time-wrapper {
+      margin-bottom: 0;
+    }
+
+    &__wrapper {
+      &::after {
+        right: 0;
+      }
+    }
+  }
+}

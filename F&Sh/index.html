@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ПРИГЛАШЕНИЕ НА СВАДЬБУ" />
+    <meta property="og:description" content="Фарруха и Шахнозы" />
+    <meta property="og:url" content="https://le_invitations.uz" />
+    <meta property="og:image:secure_url" content="https://le_invitations.uz" />
+    <meta property="og:image" content="https://imgur.com/HT5sCSj.jpg" />
+    <meta property="og:image:width" content="835" />
+    <meta property="og:image:height" content="1250" />
+    <title>Le-invitations</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="hero" data-aos="fade" data-aos-duration="2000">
+        <div class="hero__wrapper">
+          <div class="container">
+            <div class="hero__container">
+              <a href="#hero" class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="invitation" data-aos="fade-up" data-aos-duration="3000">
+        <div class="container">
+          <div class="invitation__container">
+            <h3
+              class="invitation__header"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Дорогие <br />
+              Родные и Друзья!
+            </h3>
+
+            <p
+              class="invitation__body"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              В нашей жизни произойдет очень важное событие – наша свадьба!
+              <br />
+              Мы верим и надеемся, что этот день станет красивым началом <br />
+              долгой и счастливой жизни.
+              <br /><br />
+              Позвольте пригласить Вас разделить <br />
+              с нами радость этого дня. Подарите свою поддержку и добрые
+              пожелания, <br />
+              а мы в свою очередь поделимся частичкой нашего счастья.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="calendar" data-aos="fade-up" data-aos-duration="2000">
+        <div class="container">
+          <div class="calendar__container">
+            <div class="calendar__time-wrapper">
+              <h3 class="calendar__header">Сентябрь</h3>
+
+              <hr class="calendar__line" />
+
+              <p class="calendar__date">21</p>
+
+              <hr class="calendar__line" />
+
+              <p class="calendar__year">2024</p>
+            </div>
+
+            <p class="calendar__time">
+              <span class="calendar__dec">в</span> 19:00
+            </p>
+
+            <div class="calendar__wrapper">
+              <img
+                src="./img/calendar.png"
+                alt="calendar png"
+                class="calendar__img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="timer">
+        <div class="container">
+          <div class="timer__container">
+            <h3
+              class="timer__header"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Локация
+            </h3>
+
+            <p class="timer__body" data-aos="fade-up" data-aos-duration="2000">
+              Для Вашего удобства мы подготовили карту. <br />
+              Надеемся, Вы легко найдете место <br />
+              проведения свадьбы и порадуете нас своим <br />
+              присутствием!
+            </p>
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1532.933540186571!2d64.44679319858552!3d39.78753822799099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f500fbdea164af1%3A0x31c15140b4331280!2z0KHQsNC00LDRhA!5e0!3m2!1sru!2s!4v1723395226591!5m2!1sru!2s"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+
+            <a
+              class="timer__button"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              href="https://www.google.com/maps/place/39.78753822799099,64.44679319858552"
+              target="_blank"
+            >
+              Ресторан “Садаф”
+            </a>
+
+            <p
+              class="timer__footer"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Адрес: Бухарская область, <br />
+              г. Бухара, ул. Элобод, 74
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="form">
+        <div class="container">
+          <div class="form__container">
+            <h3
+              class="form__header"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Пожелания
+            </h3>
+
+            <p
+              class="form__subheader"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Если хотите, можете тут оставить свои искренние пожелания.
+            </p>
+
+            <form
+              onsubmit="return sendTelegram()"
+              class="form__control"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              <div class="form__wrapper">
+                <label class="form__input-name form__star" for="name"
+                  >Ф.И.О</label
+                >
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form__input"
+                  placeholder="Введите текст..."
+                />
+              </div>
+
+              <div class="form__wrapper">
+                <label class="form__input-name form__star" for="text"
+                  >Ваши пожелания</label
+                >
+                <input
+                  required
+                  type="text"
+                  name="text"
+                  id="text"
+                  class="form__input"
+                  placeholder="Введите текст..."
+                />
+              </div>
+
+              <div class="form__btn-wrapper">
+                <button class="form__btn">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="telegram">
+        <div class="container">
+          <div class="telegram__container">
+            <h3
+              class="telegram__header"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Фотографии и видео
+            </h3>
+
+            <p
+              class="telegram__body"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Будем рады, если Вы поделитесь <br />
+              моментами с нашего счастливого дня <br />
+              в этой телеграм группе!
+            </p>
+
+            <div
+              class="telegram__wrapper"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              <a
+                href="https://t.me/+S9ymKjsqYsc0MmQy"
+                target="_blank"
+                class="telegram__link"
+                >Телеграм Группа</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="time">
+        <div class="container">
+          <div class="time__container">
+            <h3
+              class="time__header"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Ждем вас через:
+            </h3>
+
+            <ul
+              class="time__list"
+              id="form"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
+              <li class="time__item">
+                <h3 id="days" class="time__time">00</h3>
+
+                <p class="time__body">дней</p>
+              </li>
+
+              <li class="time__item">
+                <h3 id="hours" class="time__time">00</h3>
+
+                <p class="time__body">часов</p>
+              </li>
+
+              <li class="time__item">
+                <h3 id="minutes" class="time__time">00</h3>
+
+                <p class="time__body">минут</p>
+              </li>
+
+              <li class="time__item">
+                <h3 id="seconds" class="time__time">00</h3>
+
+                <p class="time__body">секунд</p>
+              </li>
+            </ul>
+
+            <p class="time__footer" data-aos="fade-up" data-aos-duration="2000">
+              Увидимся на свадьбе!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="wish">
+        <div class="container">
+          <div class="wish__container">
+            <a
+              href="https://le-invitations.uz"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="wish__link"
+              >@le_invitations</a
+            >
+
+            <div
+              class="wish__social-wrapper"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              <a href="tel:+998998515582" target="_blank" class="social__link">
+                <img src="./img/phone.svg" alt="phone" class="wish__img" />
+              </a>
+              <a
+                href="https://t.me/le_invitations"
+                class="social__link social__link1"
+                target="_blank"
+              >
+                <img
+                  src="./img/telegram.svg"
+                  alt="telegram"
+                  class="wish__img"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/le_invitations"
+                target="_blank"
+                class="social__link"
+              >
+                <img
+                  src="./img/instagram.svg"
+                  alt="instagra,"
+                  class="wish__img"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="fixed">
+        <button id="navbar__btn" class="navbar__btn">
+          <img
+            width="20"
+            id="music-icon"
+            src="./img/mute.svg"
+            alt="mute music"
+          />
+        </button>
+      </div>
+    </main>
+
+    <audio id="background-music" style="display: none" loop muted>
+      <source src="./music/music.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <p>Открыть с музыкой?</p>
+        <button class="modal-button" id="yesBtn">Да</button>
+        <button class="modal-button" id="noBtn">Нет</button>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/telegram.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
